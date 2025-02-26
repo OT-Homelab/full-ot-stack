@@ -31,7 +31,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres_super_password
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - pg-data:/var/lib/postgresql/data
 
   pgadmin:
     image: dpage/pgadmin4
@@ -45,6 +45,7 @@ services:
       PGADMIN_DEFAULT_PASSWORD: pgadmin_super_password
     volumes:
       - pgadmin-data:/var/lib/pgadmin
+
 
   monitoring:
     image: nicolargo/glances:latest
@@ -60,8 +61,9 @@ services:
     environment:
       - "GLANCES_OPT=-w"
 
-  hivemq-ce:
-    image: hivemq/hivemq-ce:latest
+  hivemq:
+    image: hivemq/hivemq4:latest
+    container_name: hivemq4
     ports:
       - "1883:1883"   # MQTT port
       - "8080:8080"   # HiveMQ Control Center
@@ -69,26 +71,27 @@ services:
       - HIVEMQ_LOG_LEVEL=INFO
     volumes:
       - hivemq-data:/opt/hivemq/data
+      - hivemq-log:/opt/hivemq/log
       - hivemq-extensions:/opt/hivemq/extensions
-    restart: unless-stopped
 
   grafana:
     image: grafana/grafana-enterprise
     container_name: grafana
     restart: unless-stopped
     ports:
-      - '3000:3000'
+      - "3000:3000"
     volumes:
-      - grafana-storage:/var/lib/grafana
+      - grafana-data:/var/lib/grafana
 
 
 volumes:
   gw-data:
-  pgdata:
+  pg-data:
   pgadmin-data:
   hivemq-data:
-  hivemq-extensions:     
-  grafana-storage:
+  hivemq-log:  
+  hivemq-extensions:
+  grafana-data:
 
 
 networks:
