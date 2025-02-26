@@ -59,7 +59,6 @@ We will use **Linux Ubuntu**, **Portainer**, **Docker**, and **GitHub**.
 
 ### Bonus
 
-- **Snowflake** (Cloud AI Data Platform)  
 - **Glances** (System Monitoring)  
 - **Grafana** (Data Analytics)  
 
