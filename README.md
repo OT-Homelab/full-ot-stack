@@ -1,4 +1,4 @@
-# full-stack
+# Building Your Own OT Infrastructure!
 
 Land & Expand → Install and run your software for free, in no time.
 No sales calls. No quotes. Whether the software is free or comes with a trial license, you should be able to prove the concept first, 
