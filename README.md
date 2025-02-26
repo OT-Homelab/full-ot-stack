@@ -50,6 +50,8 @@ We need to connect, collect, store, visualize, and analyze data effectively.
 Putting proof to the pudding, I will show you that we can deploy a full OT stack within minutes.  
 We will use **Linux Ubuntu**, **Portainer**, **Docker**, and **GitHub**.
 
+![ot homelab](https://github.com/user-attachments/assets/2a5d9c58-69fc-473e-b9e4-910e9e794679)
+
 ### Applications to run in Docker containers:
 
 - **Ignition** (IIOT platform) with Cirrus Link modules (MQTT)  
