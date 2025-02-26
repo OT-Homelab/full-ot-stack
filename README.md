@@ -13,8 +13,8 @@ What if you could build and test a complete OT infrastructure using equipment yo
 **Building a complete OT infrastructure using a homelab.**  
 Leveraging Linux Ubuntu, Docker, Portainer, and GitHub, you can set this up on:
 
-- ✅ An old or new PC/laptop at home  
-- ✅ A Linux VM in your IT/OT server infrastructure  
+- An old or new PC/laptop at home ✅
+- A Linux VM in your IT/OT server infrastructure ✅ 
 
 ---
 
@@ -27,9 +27,9 @@ Understanding how to leverage Linux and Docker in OT are invaluable skills for y
 
 Experimenting at home lets you:
 
-- 🔹 Test software in a safe environment before introducing it to production  
-- 🔹 Filter out ineffective solutions early  
-- 🔹 Speed up future pilot deployments  
+- Test software in a safe environment before introducing it to production  
+- Filter out ineffective solutions early  
+- Speed up future pilot deployments  
 
 ---
 
@@ -52,16 +52,16 @@ We will use **Linux Ubuntu**, **Portainer**, **Docker**, and **GitHub**.
 
 ### Applications to run in Docker containers:
 
-- 🔹 **Ignition** (IIOT platform) with Cirrus Link modules (MQTT)  
-- 🔹 **HiveMQ** (MQTT broker)  
-- 🔹 **Postgres** (Database)  
-- 🔹 **PgAdmin** (Database management)  
+- **Ignition** (IIOT platform) with Cirrus Link modules (MQTT)  
+- **HiveMQ** (MQTT broker)  
+- **Postgres** (Database)  
+- **PgAdmin** (Database management)  
 
 ### Bonus
 
-- 🔹 **Snowflake** (Cloud AI Data Platform)  
-- 🔹 **Glances** (System Monitoring)  
-- 🔹 **Grafana** (Data Analytics)  
+- **Snowflake** (Cloud AI Data Platform)  
+- **Glances** (System Monitoring)  
+- **Grafana** (Data Analytics)  
 
 💡 **Pro Tip**: For simplicity, I use hard-coded usernames/passwords and Docker volumes, but I recommend using environment variables and persistent data on the host.
 
@@ -88,4 +88,3 @@ Comment below if there's a specific aspect you'd like me to cover first!
 
 ---
 
-#DigitalTransformation #IndustrialAutomation #OT #Manufacturing40 #IIoT
