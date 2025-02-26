@@ -1,4 +1,5 @@
-# The OT Homelab: Build Your OT Infrastructure in Minutes, Not Months
+# The OT Homelab: 
+Build Your OT Infrastructure in Minutes, Not Months
 
 Tired of waiting months for complex, resource-intensive OT projects to deliver results?  
 As an end-user who's been there, I discovered a better way.  
