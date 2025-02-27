@@ -65,14 +65,22 @@ services:
     image: hivemq/hivemq4:latest
     container_name: hivemq4
     ports:
-      - "1883:1883"   # MQTT port
-      - "8080:8080"   # HiveMQ Control Center
+      - "1883:1883"  # MQTT port
+      - "8000:8000"  # WebSocket port
+      - "8080:8080"  # HiveMQ Control Center UI
     environment:
-      - HIVEMQ_LOG_LEVEL=INFO
+      - HIVEMQ_LOG_LEVEL=INFO  # Optional, change log level if needed
+
+    ulimits:
+      nofile:
+        soft: 1000000
+        hard: 1000000  # File descriptor limits
     volumes:
       - hivemq-data:/opt/hivemq/data
       - hivemq-log:/opt/hivemq/log
       - hivemq-extensions:/opt/hivemq/extensions
+
+
 
   grafana:
     image: grafana/grafana-enterprise
