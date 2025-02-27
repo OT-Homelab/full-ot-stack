@@ -84,8 +84,8 @@ My goal is to help fellow OT professionals bypass months of planning and procure
 This homelab approach has transformed how I implement OT solutions, and I'm excited to share these practical methods with you.
 
 **What are your experiences?**  
-I'll plan to share detailed step-by-step tutorials in future posts.  
-Comment below if there's a specific aspect you'd like me to cover first!
+Feel free to connect with me on LinkedIn
+https://www.linkedin.com/in/grauwelsgregory
 
 ---
 
