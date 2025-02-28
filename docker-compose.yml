@@ -70,7 +70,6 @@ services:
       - "8080:8080"  # HiveMQ Control Center UI
     environment:
       - HIVEMQ_LOG_LEVEL=INFO  # Optional, change log level if needed
-
     ulimits:
       nofile:
         soft: 1000000
@@ -80,7 +79,22 @@ services:
       - hivemq-log:/opt/hivemq/log
       - hivemq-extensions:/opt/hivemq/extensions
 
-
+  emqx1:
+    image: emqx/emqx:latest
+    container_name: emqx1
+    restart: unless-stopped    
+    environment:
+      - EMQX_NAME=emqx1
+    ports:
+      - "1884:1883"      # MQTT
+      - "18083:18083"    # Dashboard
+      - "8083:8083"      # WebSocket
+      # - "8883:8883"      # TLS      
+    networks:
+      - ETL-network      
+    volumes:
+      - emqx1-data:/opt/emqx/data
+      - emqx1-log:/opt/emqx/log
 
   grafana:
     image: grafana/grafana-enterprise
@@ -91,6 +105,18 @@ services:
     volumes:
       - grafana-data:/var/lib/grafana
 
+  node-red:
+    image: nodered/node-red:latest
+    container_name: node-red
+    restart: unless-stopped    
+    environment:
+      - TZ=Europe/Amsterdam
+    ports:
+      - "1880:1880"
+    volumes:
+      - nodered-data:/data
+
+
 
 volumes:
   gw-data:
@@ -100,6 +126,9 @@ volumes:
   hivemq-log:  
   hivemq-extensions:
   grafana-data:
+  emqx1-data:
+  emqx1-log:
+  nodered-data:
 
 
 networks:
