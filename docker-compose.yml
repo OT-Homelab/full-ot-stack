@@ -89,9 +89,7 @@ services:
       - "1884:1883"      # MQTT
       - "18083:18083"    # Dashboard
       - "8083:8083"      # WebSocket
-      # - "8883:8883"      # TLS      
-    networks:
-      - ETL-network      
+      # - "8883:8883"      # TLS         
     volumes:
       - emqx1-data:/opt/emqx/data
       - emqx1-log:/opt/emqx/log
