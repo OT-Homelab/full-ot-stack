@@ -64,6 +64,7 @@ We will use **Linux Ubuntu**, **Portainer**, **Docker**, and **GitHub**.
 - **Glances** (System Monitoring)  
 - **Grafana** (Data Analytics)
 - **NodeRed** (Low-code programming)
+- **EMQX** (another MQTT broker)
 
 💡 **Pro Tip**: For simplicity, I use hard-coded usernames/passwords and Docker volumes, but I recommend using environment variables and persistent data on the host.
 
